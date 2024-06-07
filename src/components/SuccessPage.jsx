@@ -12,10 +12,10 @@ function SuccessPage() {
       <div>
         {state &&
           Object.entries(state).map(([key, value]) => (
-            <p key={key} className="result">
+            <h3 key={key} className="result">
               <h2>{key} :</h2>
               <p className="value">{value}</p>
-            </p>
+            </h3>
           ))}
       </div>
     </div>
