@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { RiEyeCloseFill, RiEyeFill } from "react-icons/ri";
+
 const FormComponent = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
@@ -117,11 +117,7 @@ const FormComponent = () => {
             />
             <div>
               <button type="button" onClick={handleTogglePassword}>
-                {!showPassword ? (
-                  <RiEyeFill size={20} color="white" />
-                ) : (
-                  <RiEyeCloseFill size={20} color="white" />
-                )}
+                {showPassword ? <span>Show</span> : <span>Hide</span>}
               </button>
             </div>
           </div>
